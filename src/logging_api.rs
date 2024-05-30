@@ -35,7 +35,6 @@ impl DynamicLogHandler {
             .with(json_layer)
             .with(stdout_layer)
             .init();
-        // DA VERIFICARE: si possono mandare livelli diversi verso layer diversi?
         reload_handle
     }
 

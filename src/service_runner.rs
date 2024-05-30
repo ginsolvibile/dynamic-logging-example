@@ -65,13 +65,6 @@ impl Fibonacci for ServiceRunner {
             _ => {}
         }
 
-        let request_span = tracing::trace_span!(
-            "Starting computation",
-            uid = user,
-            val = val,
-        );
-        let _ = request_span.enter();
-
         let result = ServiceRunner::fibonacci(val as u32);
         debug!(uid = user, "Result for {} is {}", val, result);
 
